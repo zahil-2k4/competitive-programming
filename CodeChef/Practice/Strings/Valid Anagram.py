@@ -2,7 +2,7 @@
 #     lst=list(s)
 #     for i in t:
 #         if i in lst:
-#             lst.remove(i)
+#             lst.remove(i)                 method 1
         
 #         else:
 #             return 0
@@ -18,7 +18,7 @@ def isAnagram(s, t):
         else:
             freq_s[i]=1
             
-    for i in t:
+    for i in t:                             #method 2
         if i in freq_t:
             freq_t[i]+=1
             
@@ -32,7 +32,7 @@ def isAnagram(s, t):
         
 # def isAnagram(s, t):
 #     if sorted(s)==sorted(t):
-#         return 1
+#         return 1                          method 3
 #     else:
 #         return 0
     
