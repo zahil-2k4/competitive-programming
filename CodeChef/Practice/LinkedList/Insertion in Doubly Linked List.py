@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, value):
+    def __init__(self, value):         
         self.value = value
         self.next = None
         self.prev = None
@@ -9,7 +9,7 @@ class LinkedList:
         self.head = None
 
     def insert_at_index(self, index, value):
-        # Complete this function
+       
         new_node=Node(value)
         
         if index==0:
@@ -28,7 +28,13 @@ class LinkedList:
             current.next=new_node
             new_node.prev=current
             new_node.next=store
+            if store:
+                store.prev=new_node
+        
             
+        
+    
+    
     def print_values(self):
         current = self.head
         while current is not None:
